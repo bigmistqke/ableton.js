@@ -1,0 +1,196 @@
+.clips {
+  /* Foreground, Background */
+  scrollbar-color: white black;
+  scrollbar-width: thin;
+  box-sizing: border-box;
+}
+.clips::-webkit-scrollbar {
+  width: 10px; /* Mostly for vertical scrollbars */
+  height: 10px; /* Mostly for horizontal scrollbars */
+  border-radius: 5px;
+}
+.clips::-webkit-scrollbar-thumb {
+  /* Foreground */
+  background: white;
+  border-radius: 20px;
+  background-clip: padding-box;
+}
+.clips::-webkit-scrollbar-track {
+  /* Background */
+  background: black;
+  border-radius: 5px;
+}
+
+.fxs {
+  overflow: auto;
+}
+
+.fx {
+  margin-left: 10px;
+  display: flex;
+}
+
+.clips {
+  display: grid;
+  grid-auto-columns: auto;
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  grid-template-columns: repeat(4, 1fr);
+  background: black;
+  gap: 5px;
+  padding: 5px;
+  height: 100%;
+  /* width: 100%; */
+  /* box-sizing: border-box; */
+}
+
+.clip {
+  width: 100%;
+  height: 100%;
+  font-size: 12pt;
+  border-radius: 25px;
+  border-width: 0px;
+  border-color: none;
+  /* height: 100%; */
+  /* aspect-ratio: 1; */
+  cursor: pointer;
+  font-family: gas;
+  position: relative;
+  user-select: none;
+  transition: color 0.1s, background 0.1s;
+}
+
+.selected {
+  background: black;
+  color: lightgrey;
+  border: 2px solid lightgrey;
+}
+
+.clip button {
+  width: 100%;
+  height: calc(100vw / 4);
+  border-radius: 25px;
+  font-family: gas;
+  font-size: 12pt;
+}
+.clip button:focus {
+  outline: 0;
+}
+
+/* .clip:hover {
+  color: white;
+  background-color: black !important;
+  border: 2px solid white;
+} */
+
+.clip_key {
+  color: grey;
+  position: absolute;
+  bottom: 25px;
+  left: 0px;
+  width: 100%;
+}
+
+.fxs {
+  display: flex;
+  height: 100%;
+  overflow: auto;
+  background: black;
+}
+
+.fx {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid black;
+  flex: 1;
+  height: 100%;
+  color: white;
+  min-width: 80px;
+}
+.fx label {
+  font-size: 12pt;
+  flex: 0;
+  padding: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  user-select: none;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.portal {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 5;
+}
+
+.portal div {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  background: black;
+  border-radius: 25px;
+  color: white;
+  padding: 50px;
+  width: 50%;
+  height: 50%;
+  box-shadow: 0px 0px 50px black;
+}
+
+.IP {
+  width: 100%;
+  background: black;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.IP > div {
+  margin: 20px;
+  display: flex;
+  color: white;
+  line-height: 20pt;
+  font-size: 20pt;
+}
+
+.IP label {
+  margin-right: 10px;
+  line-height: 24pt;
+}
+
+.IP input {
+  font-family: gas;
+  font-size: 20pt;
+  line-height: 20pt;
+  height: 20pt;
+  border-radius: 20pt;
+  flex: 1;
+  padding: 2pt;
+  padding-left: 15pt;
+  padding-right: 15pt;
+
+  border: none;
+}
+
+.IP button {
+  margin-left: 10px;
+  height: 100%;
+  width: 100%;
+  font-size: 12pt;
+  border-radius: 25px;
+  border-width: 0px;
+  /* height: 50px; */
+  flex: 0;
+  box-sizing: border-box;
+  background: white;
+  color: black;
+  cursor: pointer;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+  font-family: gas;
+}

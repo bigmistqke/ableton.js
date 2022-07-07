@@ -1,0 +1,15 @@
+{
+  "name": "ableton.js",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "concurrently \"cd server\"",
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "concurrently": "^7.2.2"
+  }
+}
